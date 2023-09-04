@@ -1,0 +1,50 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Modificar mercancia </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Nombre producto</label>
+            <input type="text" class ="form-control" id = "nombreProducto"
+                [(ngModel)] = "employee.nombreProducto" name = "nombreProducto" required minlength="2">
+        </div>
+
+        <div class="form-group">
+            <label> Cantidad</label>
+            <input type="text" class ="form-control" id = "cantidad"
+                [(ngModel)] = "employee.cantidad" name = "cantidad">
+        </div>
+
+        <div class="form-group">
+            <label> Fecha actual a modificar: &nbsp;</label>
+            <label> {{employee.fechaIngreso}}</label>
+            <input type="date" class ="form-control" id = "fechaIngreso"
+                [(ngModel)] = "employee.fechaIngreso" name = "fechaIngreso">
+        </div>
+
+        <!-- <div class="form-group">
+            <label> Fecha nuevo ingreso</label>
+            <input type="date" class ="form-control" id = "fechaIngreso"
+                [(ngModel)] = "employee.fechaIngreso" name = "fechaIngreso">
+        </div> -->
+
+        <div class="form-group">
+            <label> Usuario</label>
+            <input type="text" class ="form-control" id = "usuarioRegistro"
+                [(ngModel)] = "employee.usuarioRegistro" name = "usuarioRegistro">
+        </div>
+
+        <!-- <div class="input-group">
+            <select class="custom-select" id="inputGroupSelect04">
+                <label> {{employee.usuarioRegistro}}</label>
+              <option selected> {{employee.usuarioRegistro}}</option>
+              <option value=s>asesor de ventas</option>
+              <option value="2">administrador</option>
+              <option value="3">soporte</option>
+              [(ngModel)] = "employee.fechaIngreso" name = "fechaIngreso">
+            </select>
+        </div> -->
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
